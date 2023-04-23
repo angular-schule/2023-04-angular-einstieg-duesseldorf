@@ -1,4 +1,4 @@
-<img src="http://assets.angular.schule/header-intensivworkshop.png">
+<img src="https://assets.angular.schule/header-tagesworkshop-einstieg.png">
 
 #### **mit Ferdinand Malcher**
 
