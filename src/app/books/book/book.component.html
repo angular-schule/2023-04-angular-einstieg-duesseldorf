@@ -11,5 +11,6 @@
     <p><strong>Preis:</strong> {{ book.price }}</p>
 
     <button type="button" (click)="addToCart()" class="btn-red">Add to cart</button>
+    <a [routerLink]="['/books', book.isbn]">Details</a>
   </div>
 </div>
