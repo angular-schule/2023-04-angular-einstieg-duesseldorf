@@ -1,2 +1,15 @@
-<h2>{{ book?.title }}</h2>
-<p>{{ book?.description }}</p>
+<div class="card mb-4" *ngIf="book">
+  <div class="card-body bg-light">
+    <img class="img-thumbnail float-end" [src]="book.firstThumbnailUrl">
+    <div class="card-title">
+      <h2>
+        {{ book.title }}
+        <span class="badge bg-secondary">{{ book.rating }}</span>
+      </h2>
+    </div>
+    <p>{{ book.description }}</p>
+    <p><strong>Preis:</strong> {{ book.price }}</p>
+
+    <button type="button" (click)="addToCart()" class="btn-red">Add to cart</button>
+  </div>
+</div>

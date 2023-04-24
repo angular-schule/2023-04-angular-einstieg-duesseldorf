@@ -14,5 +14,9 @@ export class DashboardComponent {
   constructor() {
     this.books = staticBookList;
   }
+
+  addToCart(book: Book) {
+    console.log(book);
+  }
 }
 
