@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/shared/book';
 import { staticBookList } from 'src/app/shared/book-data';
+import { BookStoreService } from '../book-store.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,13 +13,12 @@ export class DashboardComponent {
   cart: Book[] = [];
   // books2!: Book[]; // Non-Null Assertion // avoid!
 
-  constructor() {
-    this.books = staticBookList;
+  constructor(private bs: BookStoreService) {
+    this.books = this.bs.getAllStatic();
   }
 
   addToCart(book: Book) {
     this.cart = [...this.cart, book];
-
     console.log(this.cart);
   }
 }
