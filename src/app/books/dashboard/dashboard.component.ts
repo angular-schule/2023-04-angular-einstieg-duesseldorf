@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/shared/book';
 import { staticBookList } from 'src/app/shared/book-data';
 
@@ -9,6 +9,7 @@ import { staticBookList } from 'src/app/shared/book-data';
 })
 export class DashboardComponent {
   books: Book[] = [];
+  cart: Book[] = [];
   // books2!: Book[]; // Non-Null Assertion // avoid!
 
   constructor() {
@@ -16,7 +17,9 @@ export class DashboardComponent {
   }
 
   addToCart(book: Book) {
-    console.log(book);
+    this.cart = [...this.cart, book];
+
+    console.log(this.cart);
   }
 }
 
